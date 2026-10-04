@@ -5,25 +5,48 @@ const heroImages = [
     "images/hero2.jpg",
     "images/hero3.jpg",
     "images/hero4.jpg",
-    "images/hero5.jpg",
+    "images/hero5.jpg"
 ];
 
 let currentImage = 0;
 
 
-// Set the first image
-hero.style.backgroundImage = `url("${heroImages[currentImage]}")`;
+/* =========================================
+   PRELOAD HERO IMAGES
+========================================= */
+
+heroImages.forEach((image) => {
+
+    const preload = new Image();
+
+    preload.src = image;
+
+});
 
 
-// Change image every 6 seconds
+/* =========================================
+   SET FIRST IMAGE
+========================================= */
+
+hero.style.backgroundImage =
+    `url("${heroImages[currentImage]}")`;
+
+
+/* =========================================
+   CHANGE HERO IMAGE
+========================================= */
+
 setInterval(() => {
 
     currentImage++;
 
     if (currentImage >= heroImages.length) {
+
         currentImage = 0;
+
     }
 
-    hero.style.backgroundImage = `url("${heroImages[currentImage]}")`;
+    hero.style.backgroundImage =
+        `url("${heroImages[currentImage]}")`;
 
 }, 6000);
