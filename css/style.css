@@ -1058,3 +1058,584 @@ img {
     }
 
 }
+
+
+/* =========================================
+   PRICING & PACKAGES
+========================================= */
+
+.pricing-section {
+    background: #111;
+    padding: 120px 5%;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-header {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.pricing-header h2,
+.addons-heading h3 {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.pricing-header p,
+.addons-heading > p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Listing package cards */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 38px 30px 32px;
+    background: #151515;
+    border: 1px solid #333;
+    transition: border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    border-color: #777;
+    transform: translateY(-4px);
+}
+
+.pricing-card-featured {
+    border-color: #999;
+    background: #191919;
+}
+
+.pricing-tier,
+.addon-number {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pricing-card h3 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 22px;
+}
+
+.pricing-popular {
+    align-self: flex-start;
+    margin-top: 18px;
+    padding: 7px 10px;
+    border: 1px solid #555;
+    color: #ddd;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.pricing-price {
+    display: flex;
+    align-items: flex-start;
+    font-size: 54px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.price-currency {
+    font-size: 25px;
+    margin: 5px 4px 0 0;
+    letter-spacing: 0;
+}
+
+.pricing-size {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pricing-divider {
+    height: 1px;
+    background: #333;
+    margin: 28px 0;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    position: relative;
+    padding: 0 0 15px 20px;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #aaa;
+}
+
+.pricing-button {
+    display: block;
+    margin-top: auto;
+    padding: 15px 12px;
+    border: 1px solid #555;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.pricing-button:hover {
+    background: white;
+    border-color: white;
+    color: #111;
+}
+
+.pricing-card-featured .pricing-button {
+    background: white;
+    border-color: white;
+    color: #111;
+}
+
+.pricing-card-featured .pricing-button:hover {
+    background: #ddd;
+    border-color: #ddd;
+}
+
+/* Twilight add-ons */
+
+.addons-heading {
+    text-align: center;
+    margin: 110px auto 45px;
+    max-width: 700px;
+}
+
+.addons-heading h3 {
+    font-size: 34px;
+}
+
+.addons-heading > p {
+    font-size: 14px;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.addon-card {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    background: #151515;
+    border: 1px solid #333;
+}
+
+.addon-card h4 {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 22px 0 16px;
+}
+
+.addon-description {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.twilight-options {
+    border-top: 1px solid #333;
+    margin-bottom: 28px;
+}
+
+.twilight-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid #333;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.twilight-option strong {
+    color: white;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.addon-price {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.addon-price span {
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.real-twilight-details {
+    margin-bottom: 15px;
+}
+
+.real-twilight-details > p {
+    color: #ddd;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.addon-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid #444;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.addon-link:hover {
+    color: #bbb;
+}
+
+.travel-note {
+    margin: 35px auto 0;
+    max-width: 800px;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.travel-note span {
+    color: #ccc;
+}
+
+/* Pricing call to action */
+
+.pricing-cta {
+    margin-top: 75px;
+    text-align: center;
+}
+
+.pricing-cta p {
+    margin-bottom: 22px;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.pricing-cta-button {
+    display: inline-block;
+    padding: 16px 28px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.pricing-cta-button:hover {
+    background: white;
+    color: #111;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-card-featured {
+        grid-column: auto;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .pricing-section {
+        padding: 80px 20px;
+    }
+
+    .pricing-header {
+        margin-bottom: 40px;
+    }
+
+    .pricing-header h2 {
+        font-size: 32px;
+        letter-spacing: 3px;
+    }
+
+    .pricing-header p {
+        font-size: 14px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .pricing-card {
+        padding: 30px 25px;
+    }
+
+    .pricing-card h3 {
+        font-size: 22px;
+    }
+
+    .addons-heading {
+        margin-top: 75px;
+    }
+
+    .addons-heading h3 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .addon-card {
+        padding: 28px 24px;
+    }
+
+    .pricing-cta {
+        margin-top: 55px;
+    }
+}
+
+
+/* =========================================
+   PORTFOLIO LIGHTBOX GALLERY
+========================================= */
+
+/* Make portfolio images feel clickable */
+.portfolio-item {
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    cursor: zoom-in;
+}
+
+/* Dark fullscreen background */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 80px 60px;
+
+    background: rgba(0, 0, 0, 0.96);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+/* Show the lightbox */
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Large image */
+.lightbox-image {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Close button */
+.lightbox-close {
+    position: absolute;
+    top: 22px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 38px;
+    font-weight: 200;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+    opacity: 0.6;
+}
+
+/* Previous and next arrows */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 2px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+
+    font-size: 38px;
+    font-weight: 200;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+/* Photo number below the image */
+.lightbox-counter {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Prevent background scrolling while viewing photos */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .lightbox {
+        padding: 65px 12px 60px;
+    }
+
+    .lightbox-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 12px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 34px;
+    }
+
+    .lightbox-arrow {
+        width: 40px;
+        height: 52px;
+
+        font-size: 30px;
+
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .lightbox-counter {
+        bottom: 20px;
+        font-size: 11px;
+    }
+}
