@@ -1269,6 +1269,238 @@ img {
     margin: 22px 0 16px;
 }
 
+
+
+/* =========================================
+   TWILIGHT ADD-ON CARD ALIGNMENT
+========================================= */
+
+/* Keep both cards consistent */
+.addons-grid {
+    align-items: stretch;
+}
+
+.addon-card {
+    min-width: 0;
+    height: 100%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Consistent heading spacing */
+.addon-card h4 {
+    min-height: 28px;
+    margin: 22px 0 16px;
+}
+
+/* Give both examples the same visual footprint */
+.twilight-comparison,
+.addon-card > .addon-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 0 0 25px;
+}
+
+/* Keep images filling their frames cleanly */
+.twilight-comparison {
+    flex-shrink: 0;
+}
+
+.addon-card > .addon-image {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+/* Consistent text spacing */
+.addon-description {
+    margin-bottom: 25px;
+}
+
+.real-twilight-details {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Push both action links to the bottom */
+.addon-link {
+    margin-top: auto;
+}
+
+/* Match spacing on smaller screens */
+@media (max-width: 600px) {
+    .addon-card {
+        padding: 28px 24px;
+    }
+
+    .addon-card h4 {
+        min-height: 0;
+    }
+}
+
+
+
+/* =========================================
+   VIRTUAL TWILIGHT COMPARISON SLIDER
+========================================= */
+
+.twilight-comparison {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin: 20px 0 25px;
+    background: #222;
+    border: 1px solid #333;
+    isolation: isolate;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+/* Both images occupy the same space */
+.comparison-after,
+.comparison-before img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Twilight is the background image */
+.comparison-after {
+    z-index: 0;
+}
+
+/* Daytime image is revealed on the left */
+.comparison-before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    clip-path: inset(0 calc(100% - var(--position)) 0 0);
+}
+
+.comparison-before img {
+    pointer-events: none;
+}
+
+/* BEFORE and AFTER labels */
+.comparison-label {
+    position: absolute;
+    top: 14px;
+    z-index: 3;
+    padding: 8px 10px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    pointer-events: none;
+}
+
+.comparison-label-before {
+    left: 12px;
+}
+
+.comparison-label-after {
+    right: 12px;
+}
+
+/* Vertical divider */
+.comparison-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--position);
+    z-index: 4;
+    width: 2px;
+    background: white;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Circular drag handle */
+.comparison-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 22px;
+    transform: translate(-50%, -50%);
+}
+
+/* Invisible interactive range over the whole image */
+.comparison-range {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    touch-action: pan-y;
+}
+
+/* Visible keyboard focus indicator */
+.comparison-range:focus-visible {
+    opacity: 1;
+    outline: 3px solid white;
+    outline-offset: -5px;
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+    .comparison-label {
+        top: 8px;
+        padding: 6px 7px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .comparison-label-before {
+        left: 8px;
+    }
+
+    .comparison-label-after {
+        right: 8px;
+    }
+
+    .comparison-handle {
+        width: 36px;
+        height: 36px;
+        font-size: 19px;
+    }
+}
+
+
+
+
+/* Twilight add-on sample photos */
+
+.addon-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+}
+
+
 .addon-description {
     color: #aaa;
     font-size: 14px;

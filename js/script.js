@@ -201,3 +201,34 @@ document.addEventListener("keydown", (event) => {
         showPortfolioPhoto(activePhotoIndex + 1);
     }
 });
+
+
+/* =========================================
+   VIRTUAL TWILIGHT COMPARISON SLIDER
+========================================= */
+
+document.querySelectorAll(".twilight-comparison").forEach((slider) => {
+
+    const range = slider.querySelector(".comparison-range");
+
+    if (!range) return;
+
+    function updateComparison() {
+
+        const position = Number(range.value);
+
+        slider.style.setProperty("--position", `${position}%`);
+
+        range.setAttribute(
+            "aria-valuetext",
+            `${position}% before image visible`
+        );
+
+    }
+
+    range.addEventListener("input", updateComparison);
+
+    updateComparison();
+
+});
+
